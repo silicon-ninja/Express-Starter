@@ -1,7 +1,7 @@
 {
   "name": "express-starter",
   "version": "1.0.0",
-  "description": "This is just a starter file for you backend server",
+  "description": "This is just a starter file for your backend server",
   "main": "index.js",
   "scripts": {
     "start": "nodemon app.js"
