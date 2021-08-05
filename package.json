@@ -2,17 +2,20 @@
   "name": "express-starter",
   "version": "1.0.0",
   "description": "This is just a starter file for your backend server",
-  "main": "index.js",
+  "main": "app.js",
   "scripts": {
-    "start": "nodemon app.js"
+    "start": "nodemon src/app.js"
   },
-  "author": "Srikanth-Kandarp",
+  "author": "srikanth-kandarp",
   "license": "ISC",
   "dependencies": {
-    "body-parser": "^1.19.0",
     "dotenv": "^10.0.0",
+    "errorhandler": "^1.5.1",
     "express": "^4.17.1",
-    "mongoose": "^5.12.11",
-    "nodemon": "^2.0.7"
+    "mongoose": "^5.13.5",
+    "nodemon": "^2.0.7",
+    "rimraf": "^3.0.2",
+    "winston": "^3.3.3",
+    "winston-daily-rotate-file": "^4.5.5"
   }
 }
