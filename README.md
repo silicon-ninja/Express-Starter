@@ -17,7 +17,7 @@ This Repository contains the starter template for your backend express node serv
  ```bash
  npm install
  ```
- ## To set .env variables on a linux machine
+ ## To set .env variables on a Linux machine or a UNIX machine
  
  ```bash
  export $(cat .env | xargs)
