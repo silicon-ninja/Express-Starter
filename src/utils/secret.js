@@ -1,15 +1,15 @@
-const logger = require('./logger');
-const dotenv = require('dotenv');
-const fs = require('fs');
+import logger from './logger.js';
+import dotenv from 'dotenv';
+import fs from 'fs';
 
 if (fs.existsSync('.env')) {
   logger.debug('Using .env file to supply config environment variables');
   dotenv.config({ path: '.env' });
 }
 
-var ENVIRONMENT = process.env.NODE_ENV;
+export const ENVIRONMENT = process.env.NODE_ENV;
 
-var MONGODB_URI = process.env['MONGODB_URI'].toString();
+export const MONGODB_URI = process.env['MONGODB_URI'];
 
 if (!MONGODB_URI) {
   logger.error(
@@ -17,6 +17,3 @@ if (!MONGODB_URI) {
   );
   process.exit(1);
 }
-
-exports.ENVIRONMENT = ENVIRONMENT;
-exports.MONGODB_URI = MONGODB_URI;

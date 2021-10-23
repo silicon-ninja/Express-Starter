@@ -1,9 +1,10 @@
-const Router = require('express');
+import { Router } from 'express';
+import { hello } from '../controllers/controllers.js';
 
 const router = Router();
 
-router.get('/', (req, res) => {
-  res.send('Hello world!');
+router.get('/', async (req, res) => {
+  await hello(req, res);
 });
 
-module.exports = router;
+export default router;

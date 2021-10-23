@@ -1,6 +1,7 @@
-const errorHandler = require('errorhandler');
-const app = require('./app');
-const logger = require('./utils/logger');
+import errorHandler from 'errorhandler';
+import app from './app.js';
+
+import logger from './utils/logger.js';
 
 if (process.env.NODE_ENV !== 'production') {
   // provides full stack trace

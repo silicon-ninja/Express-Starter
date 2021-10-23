@@ -1,4 +1,4 @@
-const winston = require('winston');
+import winston from 'winston';
 
 const { printf, combine, label, timestamp } = winston.format;
 
@@ -6,6 +6,7 @@ const consoleFormat = printf(({ level, message, label, timestamp }) => {
   return `[${label} ${timestamp}] ${level}: ${message}`;
 });
 
+// @ts-ignore
 const options = (winston.LoggerOptions = {
   transports: [
     new winston.transports.Console({
@@ -26,4 +27,4 @@ if (process.env.NODE_ENV !== 'production') {
   logger.debug('Logging initialized at debug level');
 }
 
-module.exports = logger;
+export default logger;

@@ -1,21 +1,31 @@
 {
-  "name": "express-starter",
+  "name": "auth-service-es6",
   "version": "1.0.0",
-  "description": "This is just a starter file for your backend server",
+  "description": "",
   "main": "app.js",
+  "type": "module",
   "scripts": {
-    "start": "nodemon src/app.js"
+    "start": "node ./src/app.js",
+    "dev": "nodemon"
   },
-  "author": "srikanth-kandarp",
+  "author": "",
   "license": "ISC",
-  "dependencies": {
+  "dependencies": {    
+    "bcrypt": "^5.0.1",
+    "cookie-parser": "^1.4.5",
+    "cors": "^2.8.5",
     "dotenv": "^10.0.0",
     "errorhandler": "^1.5.1",
     "express": "^4.17.1",
+    "fast-two-sms": "^3.0.0",
+    "jsonwebtoken": "^8.5.1",
     "mongoose": "^5.13.5",
+    "nodemailer": "^6.6.5",
     "nodemon": "^2.0.7",
     "rimraf": "^3.0.2",
     "winston": "^3.3.3",
-    "winston-daily-rotate-file": "^4.5.5"
+    "winston-daily-rotate-file": "^4.5.5"},
+  "devDependencies": {
+    "eslint": "^8.1.0"
   }
 }

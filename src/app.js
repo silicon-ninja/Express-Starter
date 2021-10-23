@@ -1,11 +1,12 @@
-const express = require('express');
-const mongoose = require('mongoose');
-const MONGODB_URI = require('./utils/secrets');
-const logger = require('./utils/logger');
+import express from 'express';
+import mongoose from 'mongoose';
 
-const testRouter = require('./routes/test_router');
+import { MONGODB_URI } from './utils/secret.js';
+import logger from './utils/logger.js';
 
-var mongoUrl = MONGODB_URI;
+import testRouter from './routes/test_router.js';
+
+const mongoUrl = MONGODB_URI; // we are sure that the uri is not none, cuz its checked in secret.ts, so using non-null assertion operator is fine here.
 
 mongoose
   .connect(mongoUrl, {
@@ -13,11 +14,9 @@ mongoose
     useCreateIndex: true,
     useUnifiedTopology: true,
   })
-  .then(() => {
-    logger.info('Connected to the Datab');
-  })
+  .then(() => {})
   .catch((err) => {
-    logger.debug(`Mongo Connection Error: ${err}`);
+    logger.debug(`Mongo connection error: ${err}`);
   });
 
 const app = express();
@@ -31,4 +30,4 @@ app.use(express.json());
 // add routers
 app.use('/test', testRouter);
 
-module.exports = app;
+export default app;
