@@ -5,7 +5,7 @@
 ```csharp
 This Uses JavaScript ES6 Syntax.
 ```
-### This repository contains the starter template for your backend express node server for production and devlopment.
+### This repository contains the starter template for your backend express node server for production and local development.
 
 ---
 ## </b>Local Deployment</b>
