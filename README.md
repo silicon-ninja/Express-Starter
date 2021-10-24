@@ -8,24 +8,40 @@ This Uses JavaScript ES6 Syntax.
 ### This repository contains the starter template for your backend express node server for production and devlopment.
 
 ---
- ## To install all the dependencies
+## </b>Local Deployment</b>
+### Step 1 : To install all the dependencies
  
  ```bash
  npm install
  ```
- ## To set .env variables on a Linux machine or a UNIX machine
+### Step 2 : To set .env variables on a Linux machine or a UNIX machine
  
  ```bash
  export $(cat .env | xargs)
  ```
-  ## To run the Server in devlopment mode
+### Step 3 : To run the Server in devlopment mode
  
  ```bash
  npm run dev
  ```
 
- ## To run the Server 
+### Step 3 : To run the Server in production mode
  
  ```bash
  npm start
  ```
+---
+## <b>Production Deployment using Docker</b>
+
+```csharp
+Note :'Dont Forget to add your env variables.'
+```
+### Step 1 : Build your Docker image by running the following command 
+```bash
+docker build -t <your-project-name> .
+```
+
+### Step 2 : Run your Docker image by running the following command 
+```bash
+docker run -p <project-port>:<mapping-port> <your-project-name>
+```
